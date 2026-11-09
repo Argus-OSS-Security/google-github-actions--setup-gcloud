@@ -1,11 +1,12 @@
 name: 'Publish immutable action version'
 
-on:
-  workflow_dispatch:
-  release:
-    types:
-      - 'published'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   release:
+#     types:
+#       - 'published'
+# 
 jobs:
   publish:
     runs-on: 'ubuntu-latest'

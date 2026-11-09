@@ -1,16 +1,17 @@
 name: 'Integration'
 
-on:
-  push:
-    branches:
-      - 'main'
-      - 'release/**/*'
-  pull_request:
-    branches:
-      - 'main'
-      - 'release/**/*'
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - 'main'
+#       - 'release/**/*'
+#   pull_request:
+#     branches:
+#       - 'main'
+#       - 'release/**/*'
+#   workflow_dispatch:
+# 
 concurrency:
   group: '${{ github.workflow }}-${{ github.head_ref || github.ref }}'
   cancel-in-progress: true
